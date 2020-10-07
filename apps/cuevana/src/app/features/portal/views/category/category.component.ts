@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-category',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortalCategoryComponent implements OnInit {
 
-  constructor() { }
+  codigo: number;
+
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    /* const id = +this.activatedRoute.snapshot.paramMap.get('id');
+    this.codigo = id; */
+
+    this.activatedRoute.paramMap.subscribe(params => {
+      this.codigo = +params.get('id');
+    });
   }
 
 }

@@ -1,0 +1,60 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col d-flex align-items-center justify-content-between">
+        <figure class="logo">
+          <a routerLink="/">
+            <img src="https://cuevana3.io/wp-content/themes/cuevana3/public/img/cnt/cuevana3.png" alt="">
+          </a>
+        </figure>
+        <div class="right">
+          <div class="search">
+            <form>
+              <span class="form-icon">
+                <input type="text" name="s" placeholder="Buscar películas..." autocomplete="off">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <!-- <div class="ep-autosuggest"></div> -->
+              </span>
+            </form>
+          </div>
+          <div class="login">
+            <button class="btn btn-link">Entrar</button>
+            <button class="btn btn-primary">Registro</button>
+          </div>
+          <nav class="menu">
+            <ul class="clearfix">
+              <li class="menu-item">
+                <a routerLink="/">Inicio</a>
+              </li>
+              <li class="menu-item has-children">
+                <a>Géneros</a>
+                <ul class="sub-menu">
+                  <li class="menu-item" *ngFor="let item of generos">
+                    <a [routerLink]="['/category', item.id]">{{item.name}}</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item has-children one-row">
+                <a>Películas</a>
+                <ul class="sub-menu">
+                  <li class="menu-item">
+                    <a>Estrenos</a>
+                  </li>
+                  <li class="menu-item">
+                    <a>Ranking</a>
+                  </li>
+                  <li class="menu-item">
+                    <a>Más vistos</a>
+                  </li>
+                  <li class="menu-item">
+                    <a>Películas</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

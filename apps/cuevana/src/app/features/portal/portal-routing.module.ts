@@ -14,7 +14,7 @@ const routes: Routes = [
                 component: PortalHomeComponent
             },
             {
-                path: 'category',
+                path: 'category/:id',
                 component: PortalCategoryComponent
             }
         ]
