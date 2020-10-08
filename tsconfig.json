@@ -16,9 +16,8 @@
       "dom"
     ],
     "paths": {
-      "cuevana-commons": [
-        "dist/cuevana-commons/cuevana-commons",
-        "dist/cuevana-commons"
+      "@cuevana-commons": [
+        "libs/cuevana-commons/src/public-api"
       ]
     }
   }
